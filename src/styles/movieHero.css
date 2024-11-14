@@ -1,0 +1,42 @@
+@keyframes ken-burns {
+    0% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1.15);
+    }
+  }
+  
+  @keyframes fade-up {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-ken-burns {
+    animation: ken-burns 20s ease-out forwards;
+  }
+  
+  .animate-fade-up {
+    animation: fade-up 0.8s ease-out forwards;
+  }
+  
+  .animation-delay-150 {
+    animation-delay: 150ms;
+  }
+  
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .animate-ken-burns,
+    .animate-fade-up {
+      animation: none;
+    }
+  }
