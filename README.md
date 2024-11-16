@@ -167,19 +167,4 @@ src/
 - Meta tags dinámicos
 - URLs amigables
 
-## 🤝 Contribución
-Las contribuciones son bienvenidas. Por favor, asegúrate de:
-1. Hacer fork del proyecto
-2. Crear una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit de tus cambios (`git commit -m 'Add: AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abrir un Pull Request
 
-## 📄 Licencia
-Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
-
-## 👥 Equipo
-- Desarrollado con ❤️ por el equipo de CineMar
-
-## 📞 Contacto
-Para más información o soporte, por favor contacta a través de la sección de contacto en la aplicación.
