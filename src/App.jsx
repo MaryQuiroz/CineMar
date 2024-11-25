@@ -13,7 +13,7 @@ function App() {
   return (
     <ToastProvider>
     <Router>
-      <Routes>
+      <Routes basename="/cinemar">
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="cartelera" element={<MovieList />} />
