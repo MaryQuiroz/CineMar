@@ -58,7 +58,7 @@ export default function Navbar() {
                 <span className="sr-only">Cinemar</span>
                 <img
                   className="h-10 w-auto"
-                  src="/cinemar-logo.png"
+                  src="./cinemar-logo.png"
                   alt="Cinemar"
                 />
               </Link>

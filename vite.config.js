@@ -3,12 +3,13 @@ import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/CineMar/',
+  base: '/cinemar/',
   plugins: [react()],
   server: {
     historyApiFallback: {
       disableDotRule: true,
       rewrites: [
+        { from: /^\/cinemar$/, to: '/cinemar/' }, // Redirección de /cinemar a /cinemar/
         { from: /^\/pelicula\/.*$/, to: '/index.html' },
         { from: /./, to: '/index.html' }
       ],

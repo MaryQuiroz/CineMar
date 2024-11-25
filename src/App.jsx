@@ -12,8 +12,8 @@ import { ToastProvider } from './components/common/Toast';
 function App() {
   return (
     <ToastProvider>
-    <Router>
-      <Routes basename="/cinemar">
+    <Router basename="/cinemar">
+      <Routes >
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="cartelera" element={<MovieList />} />
