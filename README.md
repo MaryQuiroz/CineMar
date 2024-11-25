@@ -3,7 +3,10 @@
 ## 📝 Descripción
 CineMar es una aplicación web moderna para la gestión y visualización de cartelera de cine. Desarrollada con tecnologías de última generación, ofrece una experiencia de usuario fluida y responsive para la consulta de películas, horarios y compra de entradas.
 
-[CineMar](https://cine-mar.vercel.app/)
+[Link a la Web](https://cine-mar.vercel.app/)
+
+![Screenshot](./public/cinemarScreenshot.png)
+
 
 ## ✨ Características Principales
 - 🏠 Página de inicio con carrusel de películas destacadas
