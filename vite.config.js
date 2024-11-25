@@ -5,38 +5,35 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: '/cinemar/',
   plugins: [react()],
-  server: {
-    historyApiFallback: {
-      disableDotRule: true,
-      rewrites: [
-        { from: /^\/cinemar$/, to: '/cinemar/' }, // Redirección de /cinemar a /cinemar/
-        { from: /^\/pelicula\/.*$/, to: '/index.html' },
-        { from: /./, to: '/index.html' }
-      ],
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+        assetFileNames: 'assets/[name].[hash].[ext]',
+        chunkFileNames: 'assets/[name].[hash].js',
+        entryFileNames: 'assets/[name].[hash].js',
+      },
     },
+  },
+  server: {
     port: 5173,
-    host: true, // Necesario para acceder desde otros dispositivos en la red
-    strictPort: true, // Fuerza el uso del puerto especificado
-    open: true, // Abre el navegador automáticamente
-    cors: true, // Habilita CORS
+    host: true,
+    strictPort: true,
+    open: true,
+    cors: true,
     proxy: {
-      // Configura proxy si necesitas hacer llamadas a APIs externas
       '/api': {
         target: 'https://api.themoviedb.org/3',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, '')
       }
     },
-    watch: {
-      usePolling: true, // Mejora la detección de cambios en algunos sistemas
-    },
-    hmr: {
-      overlay: true, // Muestra errores en pantalla durante el desarrollo
-    }
   },
   resolve: {
     alias: {
-      '@': '/src' // Permite usar @ como alias para la carpeta src
+      '@': '/src'
     }
   }
 })
